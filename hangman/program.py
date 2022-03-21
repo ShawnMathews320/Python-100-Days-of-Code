@@ -1,4 +1,5 @@
 import random
+import os
 
 from wordList import wordList
 from hangmanArt import logo, stages
@@ -20,6 +21,7 @@ print(display)
 while not endOfGame:  # keep going until the game ends
     guess = input("Guess a letter in the word: ").lower()  # get user's guess of what a char in the word could be
 
+    os.system('cls')
     if guess in display:
       print(f"You have already correctly guessed {guess}.")
     for i in range(len(chosenWord)):  # go through each char in word
